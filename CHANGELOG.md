@@ -1,5 +1,11 @@
 # Changelog
 
+## 未发布
+
+### 构建
+- 提供组件级入口：`@lingxu-yyy/atlas-ui/components/AtButton` 等 6 个子路径
+- 修正 CJS 共享 chunk 的扩展名，Node 20 下 `require` 可用
+
 ## 0.1.0
 
 首个可用版本。

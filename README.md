@@ -73,12 +73,20 @@ pnpm link --global
 
 ## 体积
 
-| 产物 | 原始 | gzip |
-| --- | --- | --- |
-| `index.js`（全部 6 个组件） | 67.07 KB | 16.39 KB |
-| `style.css` | 22.03 KB | 3.22 KB |
+按组件引入时只加载该组件自身的 chunk（Vue 为 peerDependency，不计入）：
 
-单入口产物，暂不做“按需引入体积”的承诺；组件级入口在 ROADMAP 里。
+| 引入方式 | 原始 | gzip |
+| --- | --- | --- |
+| `components/AtButton` | 1.28 KB | 0.72 KB |
+| `components/AtSearchForm` | 10.15 KB | 3.19 KB |
+| `components/AtProTable` | 14.13 KB | 4.38 KB |
+| `components/AtImageUploader` | 13.68 KB | 4.54 KB |
+| `components/AtVirtualSelect` | 14.58 KB | 4.39 KB |
+| `components/AtEditableTable` | 16.40 KB | 4.50 KB |
+| 全量入口（8 个 chunk 合计） | 67.76 KB | 20.34 KB |
+| `style.css`（全量，不可摇树） | 22.03 KB | 3.22 KB |
+
+两点说明：gzip 为各文件分别压缩后的合计，合并成单文件时会更低，但那不是真实加载形态；CSS 不支持 tree-shaking，引任一组件都会带上整份 style.css。
 
 ## 质量
 
@@ -109,8 +117,8 @@ pnpm docs:dev   # 文档站
 
 ## Roadmap
 
-- v0.2：`AtStatusTag`、`AtPageHeader`、组件级按需入口
-- 后续：裁剪上传、表格虚拟滚动、暗色主题
+- v0.2：`AtFilterBuilder` 条件构造器（复用 SearchOperator，输出可序列化条件树）
+- 后续：裁剪上传、表格虚拟滚动、暗色主题、组件级样式拆分
 
 ## License
 
