@@ -8,7 +8,10 @@ export default defineConfig({
     sidebar: [
       {
         text: '组件',
-        items: [{ text: 'AtButton 按钮', link: '/components/button' }],
+        items: [
+          { text: 'AtButton 按钮', link: '/components/button' },
+          { text: 'AtProTable 数据表格', link: '/components/pro-table' },
+        ],
       },
     ],
   },
