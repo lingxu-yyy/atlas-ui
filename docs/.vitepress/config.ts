@@ -13,6 +13,7 @@ export default defineConfig({
           { text: 'AtProTable 数据表格', link: '/components/pro-table' },
           { text: 'AtSearchForm 查询表单', link: '/components/search-form' },
           { text: 'AtEditableTable 行内编辑表格', link: '/components/editable-table' },
+          { text: 'AtVirtualSelect 虚拟滚动选择器', link: '/components/virtual-select' },
         ],
       },
     ],

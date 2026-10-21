@@ -22,5 +22,8 @@ export type {
   RowState,
 } from './components/AtEditableTable'
 
+export { AtVirtualSelect } from './components/AtVirtualSelect'
+export type { AtVirtualSelectProps } from './components/AtVirtualSelect'
+
 export * from './types/schema'
 export * from './utils/schema'
