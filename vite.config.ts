@@ -28,7 +28,6 @@ export default defineConfig({
       external: ['vue'],
       output: {
         globals: { vue: 'Vue' },
-        chunkFileNames: 'chunks/[name]-[hash].js',
       },
     },
     cssCodeSplit: false,
