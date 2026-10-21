@@ -13,5 +13,14 @@ export type {
   SearchCondition,
 } from './components/AtSearchForm'
 
+export { AtEditableTable } from './components/AtEditableTable'
+export type {
+  AtEditableTableChange,
+  AtEditableTableError,
+  AtEditableTableProps,
+  RowKey,
+  RowState,
+} from './components/AtEditableTable'
+
 export * from './types/schema'
 export * from './utils/schema'

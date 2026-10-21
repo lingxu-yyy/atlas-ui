@@ -56,6 +56,12 @@ export function isSearchable(field: FieldDef): boolean {
   return field.searchable ?? true
 }
 
+/** custom 字段不参与编辑；其余字段默认参与，可显式关闭 */
+export function isEditable(field: FieldDef): boolean {
+  if (field.type === 'custom') return false
+  return field.editable ?? true
+}
+
 /**
  * 渲染器注册表：新增字段类型只能通过 register 扩展，
  * 组件内部不允许按 type 写 if/else 分支。

@@ -28,6 +28,7 @@ export const orderFields: FieldDef[] = [
     label: '下单时间',
     type: 'date',
     range: true,
+    editable: false,
     format: 'YYYY-MM-DD HH:mm',
     width: 180,
   },
@@ -36,6 +37,7 @@ export const orderFields: FieldDef[] = [
     label: '客户名',
     type: 'text',
     width: 120,
+    rules: [{ required: true, message: '客户名不能为空' }],
   },
   {
     key: 'itemCount',

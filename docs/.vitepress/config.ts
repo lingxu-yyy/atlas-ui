@@ -12,6 +12,7 @@ export default defineConfig({
           { text: 'AtButton 按钮', link: '/components/button' },
           { text: 'AtProTable 数据表格', link: '/components/pro-table' },
           { text: 'AtSearchForm 查询表单', link: '/components/search-form' },
+          { text: 'AtEditableTable 行内编辑表格', link: '/components/editable-table' },
         ],
       },
     ],

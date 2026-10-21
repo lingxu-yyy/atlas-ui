@@ -104,3 +104,7 @@ registry.has('rating')   // 布尔
 5. 三个消费方组件同步适配后才允许发布
 
 已冻结的部分：`FieldType` 取值、`FieldSchema` 各分支的字段名与类型、`FieldDef` 的交叉类型写法、`ColumnSchema` 结构、`SearchOperator` 取值。
+
+## 变更记录
+
+- v0.2.0（未发布）：FieldBase 新增可选字段 `editable`，向后兼容。

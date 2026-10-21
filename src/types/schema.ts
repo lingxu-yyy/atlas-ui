@@ -17,6 +17,8 @@ export interface FieldBase {
   width?: number
   align?: 'left' | 'center' | 'right'
   hint?: string
+  /** 是否可在 AtEditableTable 中编辑，默认 true；custom 类型恒为 false */
+  editable?: boolean
 }
 
 export interface TextField extends FieldBase {
