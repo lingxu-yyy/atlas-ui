@@ -25,6 +25,15 @@ export type {
 export { AtVirtualSelect } from './components/AtVirtualSelect'
 export type { AtVirtualSelectProps } from './components/AtVirtualSelect'
 
+export { AtFilterBuilder } from './components/AtFilterBuilder'
+export type {
+  AtFilterBuilderProps,
+  FilterGroup,
+  FilterLeaf,
+  FilterNode,
+  Logic,
+} from './components/AtFilterBuilder'
+
 export { AtImageUploader } from './components/AtImageUploader'
 export type {
   AtImageUploaderErrorPayload,
