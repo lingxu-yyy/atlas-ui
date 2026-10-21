@@ -86,7 +86,7 @@ const filteredRows = computed(() =>
 
 空值（`''`、`undefined`、`null`、空数组）的字段既不进入 `values` 也不进入 `conditions`；`false` 是有效布尔值，不会被当作空值。
 
-> 布尔字段的初始值与重置值使用 `''`（全部），而不是 `getDefaultValue` 的 `false`。原因见 [表单语义 vs 搜索语义](/schema#表单语义-vs-搜索语义)。
+> 布尔字段的初始值与重置值使用 `''`（全部），而不是 `getDefaultValue` 的 `false`。原因见 [表单语义 vs 搜索语义](../schema#表单语义-vs-搜索语义)。
 
 ## 可见性与布局
 

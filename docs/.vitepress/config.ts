@@ -1,6 +1,10 @@
+import process from 'node:process'
+
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  // GitHub Pages 是子路径部署：CI 构建必须带 /atlas-ui/ 前缀，本地仍走根路径
+  base: process.env.GITHUB_ACTIONS ? '/atlas-ui/' : '/',
   title: 'atlas-ui',
   description: '一套补足 Element Plus 空白的 Vue 3 后台业务组件库',
   themeConfig: {
