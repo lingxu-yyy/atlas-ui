@@ -57,6 +57,11 @@
       "import": "./dist/components/AtImageUploader/index.js",
       "require": "./dist/components/AtImageUploader/index.cjs"
     },
+    "./components/AtFilterBuilder": {
+      "types": "./dist/components/AtFilterBuilder/index.d.ts",
+      "import": "./dist/components/AtFilterBuilder/index.js",
+      "require": "./dist/components/AtFilterBuilder/index.cjs"
+    },
     "./style.css": "./dist/style.css"
   },
   "sideEffects": [

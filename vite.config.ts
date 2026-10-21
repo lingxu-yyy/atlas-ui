@@ -14,6 +14,7 @@ export default defineConfig({
         'components/AtEditableTable': resolve(__dirname, 'src/components/AtEditableTable/index.ts'),
         'components/AtVirtualSelect': resolve(__dirname, 'src/components/AtVirtualSelect/index.ts'),
         'components/AtImageUploader': resolve(__dirname, 'src/components/AtImageUploader/index.ts'),
+        'components/AtFilterBuilder': resolve(__dirname, 'src/components/AtFilterBuilder/index.ts'),
       },
       name: 'AtlasUI',
       formats: ['es', 'cjs'],
