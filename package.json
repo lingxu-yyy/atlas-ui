@@ -27,6 +27,36 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
+    "./components/AtButton": {
+      "types": "./dist/components/AtButton/index.d.ts",
+      "import": "./dist/components/AtButton/index.js",
+      "require": "./dist/components/AtButton/index.cjs"
+    },
+    "./components/AtProTable": {
+      "types": "./dist/components/AtProTable/index.d.ts",
+      "import": "./dist/components/AtProTable/index.js",
+      "require": "./dist/components/AtProTable/index.cjs"
+    },
+    "./components/AtSearchForm": {
+      "types": "./dist/components/AtSearchForm/index.d.ts",
+      "import": "./dist/components/AtSearchForm/index.js",
+      "require": "./dist/components/AtSearchForm/index.cjs"
+    },
+    "./components/AtEditableTable": {
+      "types": "./dist/components/AtEditableTable/index.d.ts",
+      "import": "./dist/components/AtEditableTable/index.js",
+      "require": "./dist/components/AtEditableTable/index.cjs"
+    },
+    "./components/AtVirtualSelect": {
+      "types": "./dist/components/AtVirtualSelect/index.d.ts",
+      "import": "./dist/components/AtVirtualSelect/index.js",
+      "require": "./dist/components/AtVirtualSelect/index.cjs"
+    },
+    "./components/AtImageUploader": {
+      "types": "./dist/components/AtImageUploader/index.d.ts",
+      "import": "./dist/components/AtImageUploader/index.js",
+      "require": "./dist/components/AtImageUploader/index.cjs"
+    },
     "./style.css": "./dist/style.css"
   },
   "sideEffects": [
