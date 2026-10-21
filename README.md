@@ -53,6 +53,7 @@ export const orderFields: FieldDef[] = [
 | `AtButton` | 基础按钮 | 3 variant × 3 size，loading 自动禁用，focus-visible |
 | `AtProTable` | 字段驱动的数据表格 | 三态排序、列显隐、受控分页、骨架屏、原生 table 语义 |
 | `AtSearchForm` | 查询表单 | 与表格**共用同一份 fields**，条件自动映射，可折叠 |
+| `AtFilterBuilder` | 条件构造器 | AND/OR 嵌套（≤3 层）、operator 按字段类型过滤、输出可序列化条件树 |
 | `AtEditableTable` | 行内编辑表格 | 草稿按 rowKey 存储，脏行标记、异步校验、**跨页脏行不丢失** |
 | `AtVirtualSelect` | 虚拟滚动选择器 | **10,000 条数据，DOM 常驻 13–17 个节点**，远程搜索 300ms 防抖 |
 | `AtImageUploader` | 图片上传 | Canvas 压缩实测 **728.1 KB → 167.6 KB（-77%）**，blob URL 全程回收 |
@@ -78,19 +79,20 @@ pnpm link --global
 | 引入方式 | 原始 | gzip |
 | --- | --- | --- |
 | `components/AtButton` | 1.28 KB | 0.72 KB |
+| `components/AtFilterBuilder` | 11.63 KB | 2.99 KB |
 | `components/AtSearchForm` | 10.15 KB | 3.19 KB |
 | `components/AtProTable` | 14.13 KB | 4.38 KB |
 | `components/AtImageUploader` | 13.68 KB | 4.54 KB |
 | `components/AtVirtualSelect` | 14.58 KB | 4.39 KB |
 | `components/AtEditableTable` | 16.40 KB | 4.50 KB |
-| 全量入口（8 个 chunk 合计） | 67.76 KB | 20.34 KB |
-| `style.css`（全量，不可摇树） | 22.03 KB | 3.22 KB |
+| 全量入口（9 个 chunk 合计） | 79.38 KB | 23.23 KB |
+| `style.css`（全量，不可摇树） | 25.94 KB | 3.61 KB |
 
 两点说明：gzip 为各文件分别压缩后的合计，合并成单文件时会更低，但那不是真实加载形态；CSS 不支持 tree-shaking，引任一组件都会带上整份 style.css。
 
 ## 质量
 
-- 113 条单元测试，Vitest + @vue/test-utils + jsdom
+- 127 条单元测试，Vitest + @vue/test-utils + jsdom
 - CI 覆盖 lint / typecheck / test / build / docs:build，每次 push 自动跑
 - 零运行时依赖，`vue` 只作为 peerDependency
 - 所有视觉值走 design token（`--at-*`），组件内无裸色值
@@ -117,8 +119,7 @@ pnpm docs:dev   # 文档站
 
 ## Roadmap
 
-- v0.2：`AtFilterBuilder` 条件构造器（复用 SearchOperator，输出可序列化条件树）
-- 后续：裁剪上传、表格虚拟滚动、暗色主题、组件级样式拆分
+- v0.3：裁剪上传、表格虚拟滚动、组件级样式拆分、暗色主题
 
 ## License
 

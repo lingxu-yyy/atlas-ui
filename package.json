@@ -1,6 +1,6 @@
 {
   "name": "@lingxu-yyy/atlas-ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "一套补足 Element Plus 空白的 Vue 3 后台业务组件库（零运行时依赖）",
   "license": "MIT",
   "author": "lingxu-yyy",

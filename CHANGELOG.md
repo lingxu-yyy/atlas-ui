@@ -1,9 +1,16 @@
 # Changelog
 
-## 未发布
+## 0.2.0
+
+### 组件
+- AtFilterBuilder：AND/OR 嵌套条件构造器，operator 按字段类型过滤，
+  输出可序列化条件树，支持回填与空值剪枝
+
+### 体积
+- 全量 79.38 KB（gzip 23.23 KB）；最小单组件 1.28 KB（AtButton）
 
 ### 构建
-- 提供组件级入口：`@lingxu-yyy/atlas-ui/components/AtButton` 等 6 个子路径
+- 提供组件级入口：`@lingxu-yyy/atlas-ui/components/AtButton` 等 7 个子路径
 - 修正 CJS 共享 chunk 的扩展名，Node 20 下 `require` 可用
 
 ## 0.1.0
