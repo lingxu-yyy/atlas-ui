@@ -1,0 +1,5 @@
+# pnpm 配置（非 monorepo，此处仅承载 pnpm 12 的安装策略设置）
+# esbuild 需要 postinstall 校验/放置平台二进制；白名单最小化，只批准它一个
+# 后续如需批准其他包：pnpm approve-builds <pkg>，并在提交信息里说明原因
+allowBuilds:
+  esbuild: true

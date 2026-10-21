@@ -1,0 +1,32 @@
+/* atlas-ui 设计 token（已冻结）：组件只允许使用这些变量，不写裸值 */
+:root {
+  --at-color-primary: #2f6bff;
+  --at-color-border: #dcdfe6;
+
+  /* 文字色阶 */
+  --at-color-text-1: #1f2329; /* 主文本、标题 */
+  --at-color-text-2: #646a73; /* 次文本、说明 */
+  --at-color-text-3: #8f959e; /* 占位符、禁用文字 */
+  --at-color-text-inverse: #ffffff; /* 主色底 / 深色底上的文字 */
+
+  /* 焦点环 */
+  --at-color-ring: color-mix(in srgb, var(--at-color-primary) 35%, transparent);
+
+  --at-radius-md: 6px;
+
+  --at-space-xs: 4px;
+  --at-space-sm: 8px;
+  --at-space-md: 16px;
+  --at-space-lg: 24px;
+
+  --at-font-sm: 12px;
+  --at-font-base: 14px;
+  --at-font-lg: 16px;
+
+  --at-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --at-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* 动效 */
+  --at-duration-fast: 150ms;
+  --at-ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+}
