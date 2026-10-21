@@ -29,4 +29,25 @@
   /* 动效 */
   --at-duration-fast: 150ms;
   --at-ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+
+  /* 主色状态 */
+  --at-color-primary-hover: #1f57d6;
+  --at-color-primary-active: #1a4ab8;
+
+  /* 背景与填充 */
+  --at-color-bg: #ffffff;
+  --at-color-bg-subtle: #f7f8fa;
+  --at-color-fill-hover: #f2f3f5;
+
+  /* 语义色 */
+  --at-color-success: #16a34a;
+  --at-color-warning: #d97706;
+  --at-color-danger: #dc2626;
+
+  /* 圆角 / 间距 / 字号 / 行高 */
+  --at-radius-sm: 4px;
+  --at-radius-lg: 8px;
+  --at-space-xl: 32px;
+  --at-font-xl: 20px;
+  --at-line-height: 1.5;
 }
