@@ -217,17 +217,17 @@ function onPageSizeChange(size: number) {
         <summary class="at-pro-table__settings-summary">列设置</summary>
         <div class="at-pro-table__settings-panel">
           <label
-            v-for="field in fields"
-            :key="field.key"
+            v-for="columnItem in fields"
+            :key="columnItem.key"
             class="at-pro-table__settings-item"
           >
             <input
               type="checkbox"
               class="at-pro-table__column-toggle"
-              :checked="!hiddenKeys.includes(field.key)"
-              @change="toggleColumn(field.key, $event)"
+              :checked="!hiddenKeys.includes(columnItem.key)"
+              @change="toggleColumn(columnItem.key, $event)"
             />
-            <span>{{ field.label }}</span>
+            <span>{{ columnItem.label }}</span>
           </label>
         </div>
       </details>
@@ -292,17 +292,17 @@ function onPageSizeChange(size: number) {
             </tr>
 
             <tr
-              v-for="(row, index) in data"
-              :key="getRowKey(row)"
+              v-for="(rowItem, index) in data"
+              :key="getRowKey(rowItem)"
               class="at-pro-table__row"
-              @click="emit('row-click', row)"
+              @click="emit('row-click', rowItem)"
             >
               <td v-if="selectable" class="at-pro-table__check-cell" @click.stop>
                 <input
                   type="checkbox"
-                  :checked="isSelected(row)"
+                  :checked="isSelected(rowItem)"
                   aria-label="选择行"
-                  @change="toggleRow(row, $event)"
+                  @change="toggleRow(rowItem, $event)"
                 />
               </td>
 
@@ -315,22 +315,22 @@ function onPageSizeChange(size: number) {
               >
                 <slot
                   :name="`cell-${item.column.key}`"
-                  :row="row"
-                  :value="row[item.column.key]"
+                  :row="rowItem"
+                  :value="rowItem[item.column.key]"
                   :index="index"
                 >
                   <CustomCell
                     v-if="item.field.type === 'custom'"
                     :field="asCustom(item.field)"
-                    :row="row"
+                    :row="rowItem"
                   />
                   <span
                     v-else
                     class="at-pro-table__cell-text"
                     :class="{ 'at-pro-table__cell-text--ellipsis': item.column.ellipsis }"
-                    :title="item.column.ellipsis ? formatCell(item, row) : undefined"
+                    :title="item.column.ellipsis ? formatCell(item, rowItem) : undefined"
                   >
-                    {{ formatCell(item, row) }}
+                    {{ formatCell(item, rowItem) }}
                   </span>
                 </slot>
               </td>
@@ -347,7 +347,7 @@ function onPageSizeChange(size: number) {
       :total="totalCount"
       :page-sizes="pageSizes"
       @update:page="(value: number) => emit('update:page', value)"
-      @update:pageSize="onPageSizeChange"
+      @update:page-size="onPageSizeChange"
     />
   </div>
 </template>
