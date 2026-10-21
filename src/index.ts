@@ -25,5 +25,13 @@ export type {
 export { AtVirtualSelect } from './components/AtVirtualSelect'
 export type { AtVirtualSelectProps } from './components/AtVirtualSelect'
 
+export { AtImageUploader } from './components/AtImageUploader'
+export type {
+  AtImageUploaderErrorPayload,
+  AtImageUploaderProps,
+  UploadItem,
+  UploadStatus,
+} from './components/AtImageUploader'
+
 export * from './types/schema'
 export * from './utils/schema'

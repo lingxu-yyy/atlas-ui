@@ -14,6 +14,7 @@ export default defineConfig({
           { text: 'AtSearchForm 查询表单', link: '/components/search-form' },
           { text: 'AtEditableTable 行内编辑表格', link: '/components/editable-table' },
           { text: 'AtVirtualSelect 虚拟滚动选择器', link: '/components/virtual-select' },
+          { text: 'AtImageUploader 图片上传', link: '/components/image-uploader' },
         ],
       },
     ],
